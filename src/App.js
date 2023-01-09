@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Catagory from "./components/Catagory";
+import Indruce from "./Indruce";
+import Work from "./components/Work";
+import Perosn from "./components/Perosn";
+import File from "./components/File";
+import Upload from "./components/Upload";
+import { FaSun } from "react-icons/fa";
+import { useState } from "react";
+import { MdNightlight } from "react-icons/md";
+import Contact from "./components/Contact";
+import Post from "./components/Post";
 function App() {
+  const [dark, setDark] = useState(false);
+  const handleDark = () => setDark(!dark);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={dark ? "bg-black  w-[1600px]" : "bg-white"}>
+      <div className="hidden lg:block" onClick={() => handleDark(!dark)}>
+        {dark ? (
+          <FaSun className="absolute  right-[280px] mt-[40px] text-4xl" />
+        ) : (
+          <MdNightlight className="absolute right-[280px] mt-[40px] mr-4 text-4xl" />
+        )}
+      </div>
+
+      <Navbar />
+      <Hero />
+      <Catagory />
+      <Indruce />
+      <Work />
+      <Perosn />
+      <File />
+      <Upload />
+      <Contact />
+      <Post />
     </div>
   );
 }
