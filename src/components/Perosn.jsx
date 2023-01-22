@@ -7,7 +7,7 @@ const Person = () => {
   return (
     <div className="max-w-[1600px] h-[90vh]" name="person">
       <div className="w-full h-[30vh]  flex items-center justify-between p-7">
-        <h1 className="text-5xl font-bold">
+        <h1 className="lg:text-5xl md:text-xl text-lg font-bold">
           Find the best talented <br />
           expert in jobyme
         </h1>
@@ -93,7 +93,7 @@ const Person = () => {
           </div>
         </div>
       </div>
-      <div
+      {/* <div
         className={
           next
             ? "items-center flex w-full h-[60vh] lg:ml-1 ml-[40px] absolute mt-[-432px]"
@@ -168,7 +168,7 @@ const Person = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
